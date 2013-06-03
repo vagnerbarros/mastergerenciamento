@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<h:outputStylesheet library="css" name="style_menu.css"  />
+	
+</h:head>
+<h:body>
+	
+	<div class="limite">
+	
+	<p:menubar styleClass="menu">
+			
+			<p:menuitem value="" url="home.jsf" icon="ui-icon-home" />
+	        
+	        <p:submenu label=" Sistema" icon="ui-icon-play">
+	            <p:menuitem value=" Meu Perfil" url="perfil.jsf" icon="ui-icon-circle-check" />
+	            <p:menuitem value=" Alterar Login ou Senha" url="alterar_login.jsf" icon="ui-icon-locked" />
+	            <p:separator />
+	            <p:menuitem value=" Sair" url="index.jsf" icon="ui-icon-power" />
+	        </p:submenu>
+	        
+	        <p:submenu label="Cadastro" icon="ui-icon-document">
+	            <p:submenu label="Estabelecimento" icon="ui-icon-contact">
+	                <p:menuitem value="Novo" url="cadastro_estabelecimento.jsf" />
+	                <p:menuitem value="Listagem" url="listagem_estabelecimento.jsf" />
+	            </p:submenu>
+	        </p:submenu>
+	        
+	    </p:menubar>
+	
+	</div>
+	
+</h:body>
+</html>

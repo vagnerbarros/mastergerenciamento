@@ -1,0 +1,95 @@
+@CHARSET "ISO-8859-1";
+
+*{
+	font-family: Calibri;
+}
+
+.limite{
+	position: relative;
+	margin: auto;
+	width: 1000px;
+}
+
+.clr{
+	clear: both;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background-image: url("../resources/img/bg_body.gif"); 
+	background-position: center;
+}
+
+.link_alterar_senha{
+	position: relative;
+	float: left;
+	margin-top:-6px;
+	margin-bottom: 20px;
+	text-decoration: none;
+	color: black;
+	padding-top: 10px;
+	font-weight: bold;
+}
+
+.link_alterar_senha:hover{
+	color: #088DCC;
+}
+
+.titulo_page{
+	font-size: 20px;
+	font-weight: normal;
+	font-style: italic;
+}
+
+.sub_titulo_page{
+	font-size: 16px;
+	font-weight: normal;
+	font-style: italic;
+	margin-bottom: 0;
+}
+
+header{
+	position: relative;
+	border-top: solid 10px #056896;
+	background-image: url("../resources/img/bg_topo.png"); 
+	height: 130px;
+	background-color: gray;
+	border-bottom: solid 5px #088DCC;
+}
+
+.left_topo{
+	position: relative;
+	float: left;
+}
+
+.left_topo img{
+	margin-top: 15px;
+}
+
+.right_topo{
+	position: relative;
+	float: right;
+}
+
+.right_topo h2{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	margin-top: 10px;
+	float: right;
+	margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

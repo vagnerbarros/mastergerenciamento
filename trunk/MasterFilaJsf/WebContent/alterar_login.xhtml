@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<h:outputStylesheet library="css" name="style_form.css"  />
+
+</h:head>
+<h:body>
+	
+	<f:view>
+		<ui:include src="topo.xhtml" />
+		<ui:include src="menu.xhtml" />
+	</f:view>
+	
+	<div class="limite">
+		
+		<h2 class="titulo_page">Alterar Login e/ou Senha :.</h2>
+		
+		<h:form styleClass="form_mudar_login">
+			
+			<p:outputLabel>Novo Login:</p:outputLabel>
+			<p:inputText></p:inputText>
+			
+			<p:outputLabel>Nova Senha:</p:outputLabel>
+			<p:password></p:password>
+			
+			<p:outputLabel>Repita Nova Senha:</p:outputLabel>
+			<p:password></p:password>
+			
+			<p:outputLabel>Senha Antiga:</p:outputLabel>
+			<p:password></p:password>
+			
+			<p:commandButton value="Concluir"></p:commandButton>
+			
+		</h:form>
+		
+		<div class="clr"></div>
+		
+	</div>
+	
+	<f:view>
+		<ui:include src="rodape.xhtml" />
+	</f:view>
+	
+</h:body>
+</html>

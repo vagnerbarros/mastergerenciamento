@@ -1,0 +1,25 @@
+@CHARSET "ISO-8859-1";
+
+.form_login{
+	position:relative;
+	top:10px;
+	width: 220px;
+	margin: 0 auto;
+	background-color: white;
+	padding: 30px;
+	margin-top: 50px;
+	border-radius: 10px;
+	box-shadow: 0 0 10px 10px #D2D3D5;
+}
+
+.form_login label{
+	width: 220px;
+}
+
+.form_login input[type=text]{
+	width: 215px;
+}
+
+.form_login input[type=password]{
+	width: 215px;
+}
