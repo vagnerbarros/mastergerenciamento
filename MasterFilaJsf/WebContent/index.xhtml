@@ -1,0 +1,39 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<h:outputStylesheet library="css" name="style_login.css"  />
+	<h:outputStylesheet library="css" name="style_form.css"  />
+
+</h:head>
+<h:body>
+	
+	<f:view>
+		<ui:include src="topo.xhtml" />
+	</f:view>
+	
+	<div class="limite">
+	
+		<div class="form_login">
+		
+			<h:form>
+				<p:outputLabel>Login:</p:outputLabel>
+				<p:inputText></p:inputText>
+				<p:outputLabel>Senha:</p:outputLabel>
+				<p:password></p:password>
+				<p:commandButton value="Confirmar"></p:commandButton>
+			</h:form>
+
+			<div class="clr"></div>
+
+		</div>
+		
+	</div>
+	
+</h:body>
+</html>

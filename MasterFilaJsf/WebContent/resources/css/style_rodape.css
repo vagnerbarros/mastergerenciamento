@@ -1,0 +1,11 @@
+@CHARSET "ISO-8859-1";
+
+.rodape{
+	position: relative;
+	padding: 10px;
+	background-color: #088DCC;
+	text-align: center;
+	color: white;
+	top: 20px;
+	font-size: 12px;
+}

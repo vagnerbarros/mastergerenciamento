@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+</h:head>
+<h:body>
+	
+	<f:view>
+		<ui:include src="topo.xhtml" />
+		<ui:include src="menu.xhtml" />
+	</f:view>
+	
+	<div class="limite">
+		
+		<h2 class="titulo_page">Meu Perfil :.</h2>
+		
+		<h3 class="sub_titulo_page">Nome:</h3>
+		
+		<strong>Plínio Manoel Oliveira Silva</strong>
+		
+		<h3 class="sub_titulo_page">CPF:</h3>
+		
+		<strong>101.004.934-83</strong>
+		
+		<h3 class="sub_titulo_page">Login e Senha:</h3>
+		
+		<a href="index.jsf" class="link_alterar_senha">Clique aqui para Alterar</a>
+		
+		<div class="clr"></div>
+		
+	</div>
+	
+	<f:view>
+		<ui:include src="rodape.xhtml" />
+	</f:view>
+	
+</h:body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<h:outputStylesheet library="css" name="style_form.css"  />
+
+</h:head>
+<h:body>
+	
+	<f:view>
+		<ui:include src="topo.xhtml" />
+		<ui:include src="menu.xhtml" />
+	</f:view>
+	
+	<div class="limite">
+		
+		<h2 class="titulo_page">Listagem de Estabelecimentos :.</h2>
+		
+		<h:form>
+		
+		    <p:dataTable id="dataTable" var="car" value="">
+		        
+		        <f:facet name="header">
+		            Estabelecimentos Cadastrados
+		        </f:facet>
+		
+		        <p:column headerText="Razão Social">
+		            <h:outputText value="" />
+		        </p:column>
+		
+		        <p:column headerText="CNPJ">
+		            <h:outputText value="" />
+		        </p:column>
+		
+		        <p:column headerText="Nome no Master Fila">
+		            <h:outputText value="" />
+		        </p:column>
+		
+		        <p:column headerText="Categoria">
+		            <h:outputText value="" />
+		        </p:column>
+		        
+		        <p:column headerText="Endereço">
+		            <h:outputText value="" />
+		        </p:column>
+		        
+		        <p:column headerText="Cidade">
+		            <h:outputText value="" />
+		        </p:column>
+		        
+		        <p:column headerText="Estado">
+		            <h:outputText value="" />
+		        </p:column>
+		        
+		    </p:dataTable>
+		
+		</h:form>
+		                    
+		
+		<div class="clr"></div>
+		
+	</div>
+	
+	<f:view>
+		<ui:include src="rodape.xhtml" />
+	</f:view>
+	
+</h:body>
+</html>
