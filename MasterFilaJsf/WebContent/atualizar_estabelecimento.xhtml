@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+   "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+	<h:outputStylesheet library="css" name="style_form.css"  />
+
+</h:head>
+<h:body>
+	
+	<f:view>
+		<ui:include src="topo.xhtml" />
+		<ui:include src="menu.xhtml" />
+	</f:view>
+	
+	<div class="limite">
+		
+		<h2 class="titulo_page">Atualizar Estabelecimento :.</h2>
+		
+		<h:form id="form" styleClass="form_estabelecimento">
+		
+			<p:outputLabel>Razão Social:</p:outputLabel>
+			<p:inputText value="#{atualizar_estabelecimento.razao}"></p:inputText>
+			
+			<p:outputLabel>CNPJ:</p:outputLabel>
+			<p:inputMask value="#{atualizar_estabelecimento.cnpj}" mask="99.999.999.9999-99"/>
+			
+			<p:outputLabel>Nome que aparecerá no Master Fila:</p:outputLabel>
+			<p:inputText value="#{atualizar_estabelecimento.nome}"></p:inputText>
+			
+			<p:outputLabel>E-mail:</p:outputLabel>
+			<p:inputText value="#{atualizar_estabelecimento.email}"></p:inputText>
+			
+			<p:outputLabel>Categoria:</p:outputLabel>
+			<p:selectOneMenu value="#{atualizar_estabelecimento.categoria}">
+	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
+	            <f:selectItem itemLabel="Consultório Médico" itemValue="Consultório Médico" />
+	            <f:selectItem itemLabel="Cartório" itemValue="Cartório" />
+	            <f:selectItem itemLabel="Repartição Pública" itemValue="Repartição Pública" />
+	            <f:selectItem itemLabel="Prefeitura e setores vinculados" itemValue="Prefeitura e setores vinculados" />
+	            <f:selectItem itemLabel="Agência Bancária" itemValue="Agência Bancária" />
+	            <f:selectItem itemLabel="Outros" itemValue="Outros" />
+        	</p:selectOneMenu>
+
+			<p:outputLabel>Endereço (Rua - Nº - Bairro)</p:outputLabel>
+			<p:inputText value="#{atualizar_estabelecimento.endereco}"></p:inputText>
+			
+			<p:outputLabel>Cidade:</p:outputLabel>
+			<p:selectOneMenu value="#{atualizar_estabelecimento.cidade}">
+	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
+	            <f:selectItem itemLabel="Caruaru" itemValue="Caruaru" />
+        	</p:selectOneMenu>
+        	
+			<p:outputLabel>Estado:</p:outputLabel>
+			<p:selectOneMenu value="#{atualizar_estabelecimento.estado}">
+	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
+	            <f:selectItem itemLabel="Pernambuco" itemValue="Pernambuco" />
+        	</p:selectOneMenu>
+			
+			
+			<p:commandButton action="#{atualizar_estabelecimento.atualizar}" value="Concluir" update="form"></p:commandButton>
+			
+		</h:form>
+		
+		<div class="clr"></div>
+		
+	</div>
+	
+	<f:view>
+		<ui:include src="rodape.xhtml" />
+	</f:view>
+	
+</h:body>
+</html>
