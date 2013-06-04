@@ -1,7 +1,10 @@
 package masterfila.jsf.bean;
 
+import java.io.IOException;
+
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 
 import masterfila.jsf.entidade.Funcionario;
 import masterfila.jsf.exception.LoginSenhaIncorretosException;
@@ -19,19 +22,16 @@ public class LoginBean {
 		
 	}
 	
-	public String logar(){
+	public void logar() throws IOException{
 		
-		String pagina = "index";
 		try {
 			Funcionario funcionario = Fachada.getInstance().cadastroFuncionario().logar(login, senha);
-			FacesContextUtil.setMessageInformacao("Sucesso!!", "Logado com sucesso.");
 			FacesContextUtil.setFuncionarioSessao(funcionario);
-			pagina = "home";
-			
+			FacesContext.getCurrentInstance().getExternalContext().redirect("home.jsf");
 		} catch (LoginSenhaIncorretosException e) {
-			FacesContextUtil.setMessageErro("Erro!!", "Login e/ou Senha inválido");
+			FacesContext.getCurrentInstance().getExternalContext().redirect("index.jsf?erro=true");
 		}
-		return pagina;
+		
 	}
 	
 	public String getLogin() {
