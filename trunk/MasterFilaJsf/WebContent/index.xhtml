@@ -18,16 +18,19 @@
 	</f:view>
 	
 	<div class="limite">
-	
+		
 		<div class="form_login">
 		
 			<h:form>
-			
+				
+				<p:growl id="growl" showDetail="false" sticky="false" life="1000" />  
+				
 				<p:outputLabel>Login:</p:outputLabel>
-				<p:inputText value="#{login.login}"></p:inputText>
+				<p:inputText value="#{login.login}" required="true" requiredMessage="Preencha o Login"></p:inputText>
 				<p:outputLabel>Senha:</p:outputLabel>
-				<p:password value="#{login.senha}"></p:password>
-				<p:commandButton value="Confirmar" action="#{login.logar}"></p:commandButton>
+				<p:password value="#{login.senha}" required="true" requiredMessage="Preencha a Senha"></p:password>
+				<p:commandButton value="Confirmar" action="#{login.logar}" update="growl"></p:commandButton>
+			
 			</h:form>
 
 			<div class="clr"></div>
