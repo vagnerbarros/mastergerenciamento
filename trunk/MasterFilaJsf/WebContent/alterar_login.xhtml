@@ -24,18 +24,18 @@
 		<h:form styleClass="form_mudar_login">
 			
 			<p:outputLabel>Novo Login:</p:outputLabel>
-			<p:inputText></p:inputText>
+			<p:inputText value="#{perfil.login}"></p:inputText>
 			
 			<p:outputLabel>Nova Senha:</p:outputLabel>
-			<p:password></p:password>
+			<p:password value="#{perfil.senha}"></p:password>
 			
 			<p:outputLabel>Repita Nova Senha:</p:outputLabel>
-			<p:password></p:password>
+			<p:password value="#{perfil.re_senha}"></p:password>
 			
 			<p:outputLabel>Senha Antiga:</p:outputLabel>
-			<p:password></p:password>
+			<p:password value="#{perfil.senha_antiga}"></p:password>
 			
-			<p:commandButton value="Concluir"></p:commandButton>
+			<p:commandButton action="#{perfil.alterar}" value="Concluir"></p:commandButton>
 			
 		</h:form>
 		

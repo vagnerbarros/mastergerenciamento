@@ -22,11 +22,12 @@
 		<div class="form_login">
 		
 			<h:form>
+			
 				<p:outputLabel>Login:</p:outputLabel>
-				<p:inputText></p:inputText>
+				<p:inputText value="#{login.login}"></p:inputText>
 				<p:outputLabel>Senha:</p:outputLabel>
-				<p:password></p:password>
-				<p:commandButton value="Confirmar"></p:commandButton>
+				<p:password value="#{login.senha}"></p:password>
+				<p:commandButton value="Confirmar" action="#{login.logar}"></p:commandButton>
 			</h:form>
 
 			<div class="clr"></div>

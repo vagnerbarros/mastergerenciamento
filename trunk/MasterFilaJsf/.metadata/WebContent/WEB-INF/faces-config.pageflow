@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf13703488390950" configfile="/MasterFilaJsf/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="*" x="122" y="562" id="pf13703509091921" outlinks="pf13703509091922 pf13703509091923 pf13703565500596" path="*"/>
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" x="338" y="178" id="pf13703509091924" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf13703509091922" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="home.xhtml" x="338" y="562" id="pf13703509091925" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" inlinks="pf13703509091923" path="/home.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="perfil.xhtml" x="338" y="946" id="pf13703565500597" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf13703565500596" path="/perfil.xhtml"/>
+  <links id="pf13703509091922" target="pf13703509091924" source="pf13703509091921" outcome="index"/>
+  <links id="pf13703509091923" target="pf13703509091925" source="pf13703509091921" outcome="home"/>
+  <links id="pf13703565500596" target="pf13703565500597" source="pf13703509091921" outcome="perfil"/>
+</pageflow:Pageflow>

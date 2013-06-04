@@ -21,44 +21,48 @@
 		
 		<h2 class="titulo_page">Cadastro de Estabelecimento :.</h2>
 		
-		<h:form styleClass="form_estabelecimento">
+		<h:form id="form" styleClass="form_estabelecimento">
 			
 			<p:outputLabel>Razão Social:</p:outputLabel>
-			<p:inputText></p:inputText>
+			<p:inputText value="#{cadastro_estabelecimento.razao}"></p:inputText>
 			
 			<p:outputLabel>CNPJ:</p:outputLabel>
-			<p:inputMask mask="99.999.999.9999-99"></p:inputMask>
+			<p:inputMask value="#{cadastro_estabelecimento.cnpj}" mask="99.999.999.9999-99"/>
 			
 			<p:outputLabel>Nome que aparecerá no Master Fila:</p:outputLabel>
-			<p:inputText></p:inputText>
+			<p:inputText value="#{cadastro_estabelecimento.nome}"></p:inputText>
+			
+			<p:outputLabel>E-mail:</p:outputLabel>
+			<p:inputText value="#{cadastro_estabelecimento.email}"></p:inputText>
 			
 			<p:outputLabel>Categoria:</p:outputLabel>
-			<p:selectOneMenu value="">
+			<p:selectOneMenu value="#{cadastro_estabelecimento.categoria}">
 	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
-	            <f:selectItem itemLabel="Consultórios Médicos" itemValue="1" />
-	            <f:selectItem itemLabel="Cartórios" itemValue="2" />
-	            <f:selectItem itemLabel="Repartiçoes Públicas" itemValue="3" />
-	            <f:selectItem itemLabel="Prefeitura e setores vinculados" itemValue="4" />
-	            <f:selectItem itemLabel="Agências Bancárias" itemValue="5" />
-	            <f:selectItem itemLabel="Outros" itemValue="6" />
+	            <f:selectItem itemLabel="Consultório Médico" itemValue="Consultório Médico" />
+	            <f:selectItem itemLabel="Cartório" itemValue="Cartório" />
+	            <f:selectItem itemLabel="Repartição Pública" itemValue="Repartição Pública" />
+	            <f:selectItem itemLabel="Prefeitura e setores vinculados" itemValue="Prefeitura e setores vinculados" />
+	            <f:selectItem itemLabel="Agência Bancária" itemValue="Agência Bancária" />
+	            <f:selectItem itemLabel="Outros" itemValue="Outros" />
         	</p:selectOneMenu>
 
 			<p:outputLabel>Endereço (Rua - Nº - Bairro)</p:outputLabel>
-			<p:inputText></p:inputText>
-			
-			<p:outputLabel>Estado:</p:outputLabel>
-			<p:selectOneMenu value="">
-	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
-	            <f:selectItem itemLabel="Pernambuco" itemValue="1" />
-        	</p:selectOneMenu>
+			<p:inputText value="#{cadastro_estabelecimento.endereco}"></p:inputText>
 			
 			<p:outputLabel>Cidade:</p:outputLabel>
-			<p:selectOneMenu value="">
+			<p:selectOneMenu value="#{cadastro_estabelecimento.cidade}">
 	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
-	            <f:selectItem itemLabel="Caruaru" itemValue="1" />
+	            <f:selectItem itemLabel="Caruaru" itemValue="Caruaru" />
+        	</p:selectOneMenu>
+        	
+			<p:outputLabel>Estado:</p:outputLabel>
+			<p:selectOneMenu value="#{cadastro_estabelecimento.estado}">
+	            <f:selectItem itemLabel=".: Selecione :." itemValue="" />
+	            <f:selectItem itemLabel="Pernambuco" itemValue="Pernambuco" />
         	</p:selectOneMenu>
 			
-			<p:commandButton value="Concluir"></p:commandButton>
+			
+			<p:commandButton action="#{cadastro_estabelecimento.cadastrar}" value="Concluir" update="form"></p:commandButton>
 			
 		</h:form>
 		
