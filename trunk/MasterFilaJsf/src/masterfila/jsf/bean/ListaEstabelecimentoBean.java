@@ -66,6 +66,8 @@ public class ListaEstabelecimentoBean {
 	}
 
 	public void setEstabelecimento(Estabelecimento estabelecimento) {
-		this.estabelecimento = estabelecimento;
+		if(estabelecimento != null){
+			this.estabelecimento = estabelecimento;
+		}
 	}
 }
