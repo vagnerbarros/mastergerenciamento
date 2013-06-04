@@ -1,9 +1,11 @@
 package masterfila.jsf.bean;
 
+import java.io.IOException;
 import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 
@@ -24,24 +26,34 @@ public class ListaEstabelecimentoBean {
 		listaEstabelecimento = new ListDataModel<Estabelecimento>(lista);
 	}
 	
-	public String atualizar(){
+	public void atualizar(){
 		estabelecimento = listaEstabelecimento.getRowData();
 		FacesContextUtil.setSessionAttribute("estabelecimentoAtualizar", estabelecimento);
-		return "atualizar_estabelecimento";
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("atualizar_estabelecimento.jsf");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public void prepararRemover(){
 		estabelecimento = listaEstabelecimento.getRowData();
 	}
 	
-	public String remover(){
+	public void remover(){
 		if(estabelecimento != null){
 			Fachada.getInstance().cadastroEmpresa().remover(estabelecimento);
 		}
-		return "listagem_estabelecimento";
+		try {
+			FacesContext.getCurrentInstance().getExternalContext().redirect("listagem_estabelecimento.jsf");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public DataModel<Estabelecimento> getListaEstabelecimento() {
+		List<Estabelecimento> lista = Fachada.getInstance().cadastroEmpresa().listar();
+		listaEstabelecimento = new ListDataModel<Estabelecimento>(lista);
 		return listaEstabelecimento;
 	}
 
